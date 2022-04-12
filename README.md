@@ -11,5 +11,5 @@ const David = {
                         coorganizer: "Robotic's Club Ucuenca",
                         member: "IEEE",
                       },
- challenge: "I am doing the #100DaysOfCode challenge focused on react and typescript"
+ challenge: "I am doing the #30DaysOfCode challenge focused on javascript"
 }```
