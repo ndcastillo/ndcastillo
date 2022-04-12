@@ -5,7 +5,8 @@
 const David = {
   pronouns: "he" | "him",
   code: [Javascript, HTML, CSS, Python, Matlab],
-  tools: [React, Node ],
+  learning: [R, Next.JS, EcmaScript 6],
+  UX: [Figma, Illustrator]
   architecture: ["microservices"],
   techCommunities: {
                         coorganizer: "Robotic's Club Ucuenca",
