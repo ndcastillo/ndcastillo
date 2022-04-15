@@ -1,0 +1,22 @@
+.main-container-1,
+.main-container-2,
+.day{
+    width: 70rem;
+}
+
+.main-container-1{
+    order: 2;
+}
+.main-container-2{
+    order: 3;
+}
+.nav-pages{
+    order: 4;
+    position: relative;
+    right: 0;
+    width: 70rem;
+    top: -8.5rem;
+    text-align: right;
+    padding: 2rem;
+    
+}

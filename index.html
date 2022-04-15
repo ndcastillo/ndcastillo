@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
+    <title>Bienvenido!</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width:768px)">
+    <script src="./src/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hola Joven!</h1>
+    
+    <header>
+        <h1 class="title">MY ENVIRONMENT</h1>
+        <div class="myface"></div>
+    </header>
+    
+    <body>
+        <main class="container">
+            <div class="day" id="currentDay"></div>
+            <section class="nav-pages">
+                <input type="button" class="page" onclick="showpage1('mainContainer1','mainContainer2')" />
+                <input type="button" class="page" onclick="showpage2('mainContainer1','mainContainer2')" />
+            </section>
+
+            <section class="main-container-1" id="mainContainer1">
+                <h1>Welcome _</h1>
+                <ul>
+                    <li><a href="https://github.com/ndcastillo">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/nestor-david-castillo-0592a71a4/">Linkdin</a></li>
+                </ul>
+            </section>
+
+            <section class="main-container-2" id="mainContainer2">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/MfLEAzs6JuM" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section class="banner-search"></section>
+        </main>
+    </body>
+
+    <footer>
+        <a href="">© ndcastillo</a> 
+    </footer>
 </body>
 </html>

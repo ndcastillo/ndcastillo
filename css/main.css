@@ -1,0 +1,133 @@
+:root{
+    --primary-color:#0D0D0D;
+    --second-color: #262626;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+    color: #fff;
+    width: 100vw;
+    
+}
+
+/* HEADER */
+
+.title{
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+}
+
+
+.myface{
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url('/img/head.gif');
+    width: 18.8rem;
+    height: 18.8rem;
+}
+
+/* CONTAINER */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day{
+    order: 1;
+    width: 30rem;    
+    margin: 0 auto;
+}
+
+.nav-pages{
+    order: 2;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+.main-container-1{
+    order: 3;
+    margin: 0 auto;
+    background-color: var(--second-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    width: 30rem;
+    height: 40vh;
+}
+
+.main-container-2{
+    order: 4;
+    display: none;
+    background-color: var(--second-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    width: 30rem;
+    height: 40vh;
+}
+
+.banner-search{
+    order: 5;
+}
+
+.main-container-1 ul{
+    list-style: none;
+}
+
+
+figure {
+    text-align: center;
+}
+
+.day{
+    
+    text-align: left;
+    margin: 0 0 0.5rem 0;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: aqua;
+}
+
+
+
+.page{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+    border:none;
+}
+
+.page:hover{
+    background-color: violet;
+}
+
+footer{
+    text-align: center;
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+}
+
+
+
