@@ -7,6 +7,7 @@
     <title>Bienvenido!</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width:768px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:1440px)">
     <script src="./src/app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +24,8 @@
         <main class="container">
             <div class="day" id="currentDay"></div>
             <section class="nav-pages">
-                <input type="button" class="page" onclick="showpage1('mainContainer1','mainContainer2')" />
-                <input type="button" class="page" onclick="showpage2('mainContainer1','mainContainer2')" />
+                <input type="button" class="page-button page1" id="button1" onclick="showpage1('mainContainer1','mainContainer2')" />
+                <input type="button" class="page-button page2" id="button2" onclick="showpage2('mainContainer1','mainContainer2')" />
             </section>
 
             <section class="main-container-1" id="mainContainer1">

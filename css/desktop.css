@@ -1,0 +1,12 @@
+.main-container-1,
+.main-container-2,
+.day,
+.nav-pages{
+    width: 91.7rem;
+}
+
+.nav-pages{
+    display: static;
+    top:0;
+    background-color: aqua;
+}
