@@ -6,7 +6,6 @@
 }
 
 .nav-pages{
-    display: static;
-    top:0;
+    position: static;
     background-color: aqua;
 }

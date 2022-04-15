@@ -37,13 +37,17 @@ header{
 
 .myface{
     order: 2;
+    position: relative;
     margin: 0 auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image:url('/img/head.gif');
     width: 18.8rem;
     height: 18.8rem;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-image:url('/img/head.gif');
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    
 }
 
 /* CONTAINER */
@@ -82,7 +86,6 @@ header{
     display: none;
     background-color: var(--second-color);
     border-radius: 1rem;
-    padding: 3rem;
     width: 30rem;
     height: 30vh;
 }
@@ -116,6 +119,9 @@ a:hover{
     color: aqua;
 }
 
+li {
+    padding: 0.5rem;
+}
 
 
 .page-button{
@@ -140,3 +146,14 @@ footer{
     background-color: violet;
 }
 
+@keyframes move {
+    0%   {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100%;
+        
+        }
+    
+    100% {
+         left:0px; top:0px;}
+  }
