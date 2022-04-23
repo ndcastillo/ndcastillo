@@ -75,7 +75,7 @@ header{
     order: 3;
     margin: 0 auto;
     background-color: var(--second-color);
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     padding: 3rem;
     width: 30rem;
     height: 30vh;
@@ -85,7 +85,7 @@ header{
     order: 4;
     display: none;
     background-color: var(--second-color);
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     width: 30rem;
     height: 30vh;
 }
