@@ -20,7 +20,6 @@ header{
     order: 1;
     height: var(--heigth-title);
     width: var(--heigth-title);
-    background-color: blue;
     margin: 0;
 }
 
