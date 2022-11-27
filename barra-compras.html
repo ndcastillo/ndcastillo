@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras Barra Centro</title>
+    <style type="text/css">
+        html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+        a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+        a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+        div.comment { display:none }
+        table { border-collapse:collapse; page-break-after:always }
+        .gridlines td { border:1px dotted black }
+        .gridlines th { border:1px dotted black }
+        .b { text-align:center }
+        .e { text-align:center }
+        .f { text-align:right }
+        .inlineStr { text-align:left }
+        .n { text-align:right }
+        .s { text-align:left }
+        td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style1 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        th.style1 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        td.style2 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+        th.style2 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+        td.style3 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style3 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style6 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style6 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style7 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style7 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style9 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style10 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style10 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style11 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style11 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style12 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        th.style12 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        td.style13 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        th.style13 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        td.style14 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        th.style14 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        td.style15 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style15 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style16 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style16 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style17 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style18 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style18 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style19 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style19 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style20 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style20 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style21 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style21 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style22 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style22 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style23 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style23 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style24 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style24 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style25 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style25 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style26 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+        th.style26 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:10pt; background-color:white }
+        td.style27 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style27 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style28 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#3F3F3F; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style28 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#3F3F3F; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style29 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#3F3F3F; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        th.style29 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#3F3F3F; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+        td.style30 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style30 { vertical-align:bottom; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style31 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        th.style31 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#8EAADB }
+        td.style32 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style32 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style33 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        th.style33 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+        td.style34 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFC000 }
+        th.style34 { vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFC000 }
+        table.sheet0 col.col0 { width:164.69999811pt }
+        table.sheet0 col.col1 { width:53.54444383pt }
+        table.sheet0 col.col2 { width:92.85555449pt }
+        table.sheet0 col.col3 { width:42pt }
+        table.sheet0 col.col4 { width:42pt }
+        table.sheet0 tr { height:15pt }
+        table.sheet0 tr.row104 { height:28.8pt }
+        table.sheet0 tr.row142 { height:28.8pt }
+      </style>
+    </head>
+  
+    <body>
+  <style>
+  @page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+  body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+  </style>
+      <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+          <col class="col0">
+          <col class="col1">
+          <col class="col2">
+          <col class="col3">
+          <col class="col4">
+          <tbody>
+            <tr class="row0">
+              <td class="column0 style34 s style34" colspan="4">Check List de Compras de Barra - Centro</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row1">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Floralp o Tru</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row2">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row3">
+              <td class="column0 style3 s">Leche Entera</td>
+              <td class="column1 style3 s">LITROS</td>
+              <td class="column2 style4 n">10</td>
+              <td class="column3 style5 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row4">
+              <td class="column0 style3 s">Leche Semidescremada</td>
+              <td class="column1 style3 s">LITROS</td>
+              <td class="column2 style4 n">5</td>
+              <td class="column3 style5 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row5">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row6">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Magu Naula</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row7">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row8">
+              <td class="column0 style7 s">Te Verde</td>
+              <td class="column1 style8 s">ENVASE</td>
+              <td class="column2 style9 s">1/4 ENVASE</td>
+              <td class="column3 style8 s">1 ENVASE</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row9">
+              <td class="column0 style10 s">Te Negro</td>
+              <td class="column1 style11 s">ENVASE</td>
+              <td class="column2 style9 s">1/4 ENVASE</td>
+              <td class="column3 style8 s">1 ENVASE</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row10">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row11">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Tesalia</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row12">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row13">
+              <td class="column0 style7 s">Agua con gas </td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">10</td>
+              <td class="column3 style5 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row14">
+              <td class="column0 style7 s">Agua sin gas</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">10</td>
+              <td class="column3 style5 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row15">
+              <td class="column0 style7 s">Guitig 1,5 litros</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">3</td>
+              <td class="column3 style5 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row16">
+              <td class="column0 style7 s">Pepsi 1,5 Litros</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">2</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row17">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row18">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Tesalia</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row19">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row20">
+              <td class="column0 style7 s">Pulpa Mora</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">5</td>
+              <td class="column3 style5 s">2 KILOS</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row21">
+              <td class="column0 style7 s">Pulpa Naranjilla</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">3</td>
+              <td class="column3 style5 s">1 KILO</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row22">
+              <td class="column0 style7 s">Pulpa Tomate</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">3</td>
+              <td class="column3 style5 s">1 KILO</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row23">
+              <td class="column0 style7 s">Pulpa Guanabana</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">5</td>
+              <td class="column3 style5 s">1 KILO</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row24">
+              <td class="column0 style7 s">Pulpa Maracuya</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">5</td>
+              <td class="column3 style5 s">1 KILO</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row25">
+              <td class="column0 style7 s">Pulpa Tamarindo</td>
+              <td class="column1 style11 s">UNIDADES</td>
+              <td class="column2 style4 n">3</td>
+              <td class="column3 style5 s">1 KILO</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row26">
+              <td class="column0 style33 null"></td>
+              <td class="column1 style33 null"></td>
+              <td class="column2 style33 null"></td>
+              <td class="column3 style33 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row27">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Macario Bondia</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row28">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row29">
+              <td class="column0 style7 s">Café en grano</td>
+              <td class="column1 style11 s">KILO</td>
+              <td class="column2 style4 n">1</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row30">
+              <td class="column0 style30 null"></td>
+              <td class="column1 style30 null"></td>
+              <td class="column2 style30 null"></td>
+              <td class="column3 style30 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row31">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Zhumir</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row32">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row33">
+              <td class="column0 style7 s">Zhumir</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">5</td>
+              <td class="column3 style5 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row34">
+              <td class="column0 style32 null"></td>
+              <td class="column1 style32 null"></td>
+              <td class="column2 style32 null"></td>
+              <td class="column3 style32 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row35">
+              <td class="column0 style31 s style31" colspan="4">Proveedor: Cerveceria Nacional</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row36">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row37">
+              <td class="column0 style7 s">Pilsener pequeña</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row38">
+              <td class="column0 style7 s">Club pequeña</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row39">
+              <td class="column0 style7 s">Pilsener grande</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">12</td>
+              <td class="column3 style5 n">36</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row40">
+              <td class="column0 style7 s">Club grande</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">12</td>
+              <td class="column3 style5 n">36</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row41">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row42">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Kuritambo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row43">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row44">
+              <td class="column0 style7 s">Kuritambo Sinchi</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row45">
+              <td class="column0 style7 s">Kuritambo Achik</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row46">
+              <td class="column0 style7 s">Kuritambo Killa</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row47">
+              <td class="column0 style7 s">Kuritambo Puka</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row48">
+              <td class="column0 style7 s">Kuritambo Antara</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row49">
+              <td class="column0 style7 s">Kuritambo Temporada</td>
+              <td class="column1 style15 s">UNIDADES</td>
+              <td class="column2 style5 n">3</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row50">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row51">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: CuencaLicor</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row52">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row53">
+              <td class="column0 style3 s">Whisky Something</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row54">
+              <td class="column0 style3 s">Ron blanco Cartavio</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row55">
+              <td class="column0 style3 s">Amaretto (Marca Kremila)</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row56">
+              <td class="column0 style7 s">Fernet</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row57">
+              <td class="column0 style7 s">Licor de Menta (Marca Kremila)</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row58">
+              <td class="column0 style7 s">Coco Seco</td>
+              <td class="column1 style16 s">FUNDA</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row59">
+              <td class="column0 style7 s">Ron dorado Cartavio</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row60">
+              <td class="column0 style7 s">Ron Abuelo</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row61">
+              <td class="column0 style10 s">Gin Antagonic</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">3</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row62">
+              <td class="column0 style10 s">Gin Greenwalls</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row63">
+              <td class="column0 style7 s">Mentas (Caramelos)</td>
+              <td class="column1 style16 s">FUNDAS</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row64">
+              <td class="column0 style7 s">Vino Maipo Tinto Merlot</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row65">
+              <td class="column0 style7 s">Vino Maipo Tinto Malbec</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row66">
+              <td class="column0 style7 s">Vino Maipo Blanco Sauvignon</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row67">
+              <td class="column0 style7 s">Vino Carton (Marca Uvita)</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">8</td>
+              <td class="column3 style5 n">24</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row68">
+              <td class="column0 style7 s">Removedores</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">30</td>
+              <td class="column3 style5 n">100</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row69">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row70">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: AndinaLicores</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row71">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row72">
+              <td class="column0 style7 s">Agua Tonica</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">2</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row73">
+              <td class="column0 style7 s">Cerveza La paz</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style17 n">1</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row74">
+              <td class="column0 style7 s">Vino Finca las Moras</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row75">
+              <td class="column0 style7 s">Vino JP chenet</td>
+              <td class="column1 style16 s">UNIDADES</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row76">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row77">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Bioha</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row78">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row79">
+              <td class="column0 style7 s">Sorbetes de Papel</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row80">
+              <td class="column0 style7 s">Desechable pequeño rectangular</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">50</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row81">
+              <td class="column0 style7 s">Desechable grande cuadrado</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">50</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row82">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row83">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Megalimpio</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row84">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row85">
+              <td class="column0 style7 s">VASOS CAFÉ</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">50</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row86">
+              <td class="column0 style7 s">VASOS DOMO</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">5</td>
+              <td class="column3 style5 n">25</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row87">
+              <td class="column0 style7 s">ESPONJAS PARA PLATOS </td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">4</td>
+              <td class="column3 style5 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row88">
+              <td class="column0 style18 s">FUNDAS PARA PORCIONAR</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 s">4 C/U</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row89">
+              <td class="column0 style18 s">TOALLAS DE MANO EN Z/DISPENSADOR </td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row90">
+              <td class="column0 style18 s">JABON DE MANOS</td>
+              <td class="column1 style5 s">GALON</td>
+              <td class="column2 style5 s">1/4 GALON</td>
+              <td class="column3 style5 s">1 GALON</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row91">
+              <td class="column0 style18 s">DETERGENTE </td>
+              <td class="column1 style5 s">FUNDA</td>
+              <td class="column2 style5 s">1/2 FUNDA</td>
+              <td class="column3 style5 s">1 FUNDA</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row92">
+              <td class="column0 style3 s">PAÑITOS TIPO ESPONJA</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row93">
+              <td class="column0 style7 s">FIBRA DE PARRILLA </td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row94">
+              <td class="column0 style7 s">PAPEL HIGIENICO DOMESTICO</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">4</td>
+              <td class="column3 style5 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row95">
+              <td class="column0 style7 s">CLORO</td>
+              <td class="column1 style5 s">GALON</td>
+              <td class="column2 style5 s">1/4 GALON</td>
+              <td class="column3 style5 n">1</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row96">
+              <td class="column0 style7 s">ALCOHOL</td>
+              <td class="column1 style5 s">GALON</td>
+              <td class="column2 style5 s">1/4 GALON</td>
+              <td class="column3 style5 n">1</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row97">
+              <td class="column0 style7 s">DESINFECTANTE </td>
+              <td class="column1 style5 s">GALON</td>
+              <td class="column2 style5 s">1/4 GALON</td>
+              <td class="column3 style5 n">1</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row98">
+              <td class="column0 style7 s">ESTROPAJO METALICO </td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row99">
+              <td class="column0 style7 s">SALSEROS CON TAPA</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">25</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row100">
+              <td class="column0 style7 s">CUBIERTOS </td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">25</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row101">
+              <td class="column0 style7 s">FUNDAS DE BASURA NEGRA DOMESTICA</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">2</td>
+              <td class="column3 style5 n">8</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row102">
+              <td class="column0 style7 s">FUNDA BASURA AZUL DOMESTICA</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row103">
+              <td class="column0 style7 s">FUNDAS TIPO CAMISETA GRANDE</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row104">
+              <td class="column0 style7 s">FUNDAS TIPO CAMISETA PEQUEÑA POSTRES</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row105">
+              <td class="column0 style7 s">CAJAS PIZZA</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">5</td>
+              <td class="column3 style5 n">15</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row106">
+              <td class="column0 style19 s">SORBETES NEGROS</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">1</td>
+              <td class="column3 style5 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row107">
+              <td class="column0 style7 s">CONTENEDOR POSTRES</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style5 n">10</td>
+              <td class="column3 style5 n">25</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row108">
+              <td class="column0 style7 s">SERVILLETAS</td>
+              <td class="column1 style5 s">PAQUETE</td>
+              <td class="column2 style5 n">5</td>
+              <td class="column3 style5 n">20</td>
+              <td class="column4 style26 null"></td>
+            </tr>
+            <tr class="row109">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row110">
+              <td class="column0 style1 s style1" colspan="4">Proveedor: Mercado</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row111">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row112">
+              <td class="column0 style7 s">FRUTILLA</td>
+              <td class="column1 style11 s">UNIDAD</td>
+              <td class="column2 style20 s">20 UNID</td>
+              <td class="column3 style15 s">1 CAJA</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row113">
+              <td class="column0 style7 s">CEDRON</td>
+              <td class="column1 style11 s">ENVASE</td>
+              <td class="column2 style21 s">1/2 ENVASE</td>
+              <td class="column3 style22 n">$0.50</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row114">
+              <td class="column0 style3 s">HIERBA BUENA</td>
+              <td class="column1 style11 s">BANDEJA</td>
+              <td class="column2 style20 n">1</td>
+              <td class="column3 style23 n">$1</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row115">
+              <td class="column0 style18 s">JENGIBRE </td>
+              <td class="column1 style11 s">PORCIONES</td>
+              <td class="column2 style20 n">10</td>
+              <td class="column3 style23 n">$2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row116">
+              <td class="column0 style27 s">MANZANILLA </td>
+              <td class="column1 style11 s">RECIPIENTE</td>
+              <td class="column2 style20 s">1/2 RECIP</td>
+              <td class="column3 style22 n">$0.50</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row117">
+              <td class="column0 style7 s">LIMON</td>
+              <td class="column1 style11 s">UNIDAD</td>
+              <td class="column2 style20 n">30</td>
+              <td class="column3 style15 n">200</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row118">
+              <td class="column0 style28 s">CANELA EN RAMA </td>
+              <td class="column1 style29 s">RECIPIENTE</td>
+              <td class="column2 style29 s">1/2 recip</td>
+              <td class="column3 style29 s">1/2 libra</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row119">
+              <td class="column0 style28 s">CANELA EN POLVO</td>
+              <td class="column1 style29 s">RECIPIENTE</td>
+              <td class="column2 style29 s">1/2 recip</td>
+              <td class="column3 style29 s">1 funda</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row120">
+              <td class="column0 style6 null"></td>
+              <td class="column1 style6 null"></td>
+              <td class="column2 style6 null"></td>
+              <td class="column3 style6 null"></td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row121">
+              <td class="column0 style12 s style14" colspan="4">Proveedor: SuperMaxi</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row122">
+              <td class="column0 style2 s">Producto</td>
+              <td class="column1 style2 s">Unidad</td>
+              <td class="column2 style2 s">Minimo</td>
+              <td class="column3 style2 s">Maximo</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row123">
+              <td class="column0 style18 s">FRAMBUESAS</td>
+              <td class="column1 style24 s">BANDEJA</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row124">
+              <td class="column0 style3 s">ARANDANOS</td>
+              <td class="column1 style11 s">BANDEJA</td>
+              <td class="column2 style20 n">2</td>
+              <td class="column3 style15 n">4</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row125">
+              <td class="column0 style18 s">CACAO ARAWI FUNDA 500 GR</td>
+              <td class="column1 style24 s">UNIDAD</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row126">
+              <td class="column0 style3 s">CAFÉ SOLUBLE (Marca Colcafe)</td>
+              <td class="column1 style4 s">UNIDAD</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row127">
+              <td class="column0 style18 s">COCOA (Marca La Universal)</td>
+              <td class="column1 style24 s">UNIDAD</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row128">
+              <td class="column0 style10 s">COCA COLA (1 Litro)</td>
+              <td class="column1 style17 s">UNIDAD</td>
+              <td class="column2 style15 n">3</td>
+              <td class="column3 style15 n">8</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row129">
+              <td class="column0 style7 s">Coca Cola (Personal)</td>
+              <td class="column1 style17 s">UNIDAD</td>
+              <td class="column2 style15 n">10</td>
+              <td class="column3 style15 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row130">
+              <td class="column0 style7 s">Fanta (Personal)</td>
+              <td class="column1 style17 s">UNIDAD</td>
+              <td class="column2 style15 n">10</td>
+              <td class="column3 style15 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row131">
+              <td class="column0 style7 s">Fiora Vanti (Personal)</td>
+              <td class="column1 style17 s">UNIDAD</td>
+              <td class="column2 style15 n">10</td>
+              <td class="column3 style15 n">30</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row132">
+              <td class="column0 style7 s">CONTENEDOR PARA LLEVAR LASAÑA</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style15 n">5</td>
+              <td class="column3 style15 n">12</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row133">
+              <td class="column0 style7 s">CREMA DE LECHE (Marca True o Super)</td>
+              <td class="column1 style5 s">LITRO</td>
+              <td class="column2 style15 n">3</td>
+              <td class="column3 style15 n">8</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row134">
+              <td class="column0 style7 s">ESPONJA MAGICA</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style15 n">4</td>
+              <td class="column3 style15 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row135">
+              <td class="column0 style18 s">HELADO DE CAFE </td>
+              <td class="column1 style24 s">LITRO</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row136">
+              <td class="column0 style18 s">HELADO DE CHOCOLATE</td>
+              <td class="column1 style24 s">LITRO</td>
+              <td class="column2 style15 n">2</td>
+              <td class="column3 style15 n">3</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row137">
+              <td class="column0 style18 s">HELADO DE VAINILLA</td>
+              <td class="column1 style24 s">LITRO</td>
+              <td class="column2 style15 n">2</td>
+              <td class="column3 style15 n">5</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row138">
+              <td class="column0 style3 s">HORCHATA</td>
+              <td class="column1 style4 s">SOBRES</td>
+              <td class="column2 style15 n">8</td>
+              <td class="column3 style15 s">1 CAJA</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row139">
+              <td class="column0 style7 s">JABON EN BARRA PLATOS</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style15 n">4</td>
+              <td class="column3 style15 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row140">
+              <td class="column0 style10 s">JHONNIE ROJO</td>
+              <td class="column1 style17 s">BOTELLA</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row141">
+              <td class="column0 style18 s">MARSHMELLOWS</td>
+              <td class="column1 style24 s">UNIDAD</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row142">
+              <td class="column0 style18 s">OREOS</td>
+              <td class="column1 style24 s">EMPAQUE 10 UNIDAD</td>
+              <td class="column2 style15 n">2</td>
+              <td class="column3 style15 n">6</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row143">
+              <td class="column0 style7 s">Servilletas</td>
+              <td class="column1 style5 s">UNIDAD</td>
+              <td class="column2 style15 n">4</td>
+              <td class="column3 style15 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row144">
+              <td class="column0 style18 s">TE FRUTOS ROJOS</td>
+              <td class="column1 style24 s">CAJA   </td>
+              <td class="column2 style15 s">1/2 CAJA</td>
+              <td class="column3 style15 n">1</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row145">
+              <td class="column0 style18 s">TE HELADO</td>
+              <td class="column1 style24 s">ENVASE</td>
+              <td class="column2 style15 n">1</td>
+              <td class="column3 style15 n">2</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+            <tr class="row146">
+              <td class="column0 style18 s">VELAS</td>
+              <td class="column1 style24 s">EMPAQUE  </td>
+              <td class="column2 style15 n">2</td>
+              <td class="column3 style15 n">10</td>
+              <td class="column4 style25 null"></td>
+            </tr>
+          </tbody>
+      </table>
+    </body>
+</html>
