@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barra de Navegación">
+    <title>Nav Bar Component</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size:62.5%;
+        }
+        body{
+            font-size: 1.6rem;
+            background-color: #3D3D3D;
+        }
+
+        .acces-nav{
+            display: block;
+            position: absolute;
+            
+        }
+
+        .main-nav{
+            display: none;
+            position: absolute;
+            
+            height: auto;
+            width: 100vw;
+            background: #3D3D3D;
+        }
+        .main-nav__hamburguer-container{
+            display: block;
+            position: fixed;
+            z-index: 10;
+            width: 43px;
+            height: 30px;
+            margin: 30px 0 0 20px;
+            background: url("./icons/Menu-Mobile.svg") center/cover no-repeat;
+            cursor: pointer;
+        }
+
+        .main-nav__contact-language-container{
+            width: 100%;
+            padding: 29px 0 0 104px;
+            display: block;
+        }
+        .main-nav__contact-language-container ul{
+            list-style: none;
+        }
+
+        .main-nav__contact-language-container li{
+            display: inline-block;
+            background-color: #FFF;
+            border-radius: 1rem;
+            margin-right: 8px;
+        }
+
+        .main-nav__contact-language-container li:hover{
+            background-color: #F3A660;
+        }
+
+        .main-nav__contact-language-container li a{
+            display: block;
+            width: 32px;
+            height: 32px;
+        }
+
+        .main-nav__contact-language-container li:first-child a{
+            background: url('./icons/telephone.svg') center/cover no-repeat; 
+            background-size:20px 20px;
+        }
+
+        .main-nav__contact-language-container li:nth-child(2) a{
+            background: url('./icons/language.svg') center/cover no-repeat; 
+            background-size:20px 20px;
+        }
+
+        .main-nav__pages-container{
+            width: 100%;
+            height: auto;
+            padding: 45px 37px;
+            
+        }
+
+        .main-nav__pages-container ul{
+            display: block;
+            width: 100%;
+            list-style: none;
+        }
+
+        .main-nav__pages-container ul li{
+            line-height: 41px;
+            
+        }
+
+        .main-nav__pages-container_address1{
+            font-family: 'Blacker Sans Display';
+            letter-spacing: -0.02em;
+            color: #fff;
+            font-size: 3.5rem;
+            text-decoration: none;
+        }
+
+        .main-nav__pages-container_address1 li{
+            width: 100%;
+            height: auto;
+        }
+
+        .main-nav__pages-container ul li ul li{
+            text-align: right;
+        }
+
+        .main-nav__pages-container_address2{
+            font-family: 'Blacker Sans Display';
+            font-style: normal;
+            font-weight: 100;
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+
+        .main-nav__blog-privacity-container{
+            width: 100%;
+            height: auto;
+            text-align: right;
+            padding: 3rem 2rem;
+        }
+
+        .main-nav__blog-privacity-container ul{
+            list-style: none;
+        }
+
+        
+        .main-nav__blog-privacity-container a{
+            font-family: 'Blacker Sans Display';
+            font-size: 2rem;
+            line-height: 24px;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .main-nav__book-button-container{
+            display: block;
+            position: fixed;
+            z-index: 10;
+            padding: 25px 2px 0 8px;
+            top: 0;
+            right: 0;
+            border-radius: 0% 100% 0% 100% / 7% 0% 100% 93% ;
+            width: 100px;
+            height: 100px;
+            background-color: #F3A660;
+            text-decoration: none;
+            color: #FFF;
+            font-family: 'Blacker Sans Display';
+            font-size: 2rem;
+        }
+
+        .main-nav__networks-buttons-container{
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .main-nav__networks-buttons-container ul{
+            list-style: none;
+        }
+        .main-nav__networks-buttons-container li{
+            display: inline;
+            padding-right: 10px ;
+        }
+
+        .main-nav__networks-buttons-container_networks-button{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            
+        }
+
+        .facebook{
+            background: url("./icons/facebook.svg") center no-repeat;
+        }
+
+        .instagram{
+            background: url("./icons/instagram.svg") center no-repeat;
+        }
+
+        .tiktok{
+            background: url("./icons/tiktok.svg") center no-repeat;
+        }
+
+        .main-nav__book-button-container:hover{
+            background-color: aqua;
+        }
+        
+
+    </style>
+</head>
+<body>
+   <header>
+       <nav class="access-nav">
+            <div class="main-nav__hamburguer-container" id="hamburguer-active" onclick="navBar()">
+            </div>
+        
+            <div class="main-nav__contact-language-container">
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+            <a class="main-nav__book-button-container" href="">RESERVAR</a>
+       </nav>
+
+       <nav class="main-nav">
+           <div class="main-nav__pages-container">
+            <ul>
+                <li><a class="main-nav__pages-container_address1" href="">Página Principal</a></li>
+                <li><a class="main-nav__pages-container_address1" href="">Concepto</a></li>
+                <li><a class="main-nav__pages-container_address1" href="">Comodidad</a>
+                 <ul>
+                     <li><a class="main-nav__pages-container_address2" href="">Habitación Individual</a></li>
+                     <li><a class="main-nav__pages-container_address2" href="">Habitación Doble</a></li>
+                     <li><a class="main-nav__pages-container_address2" href="">Habitación Triple</a></li>
+                     <li><a class="main-nav__pages-container_address2" href="">Suite Familiar</a></li>
+                 </ul>
+                 </li>
+                <li><a class="main-nav__pages-container_address1" href="">Servicios</a></li>
+                <li><a class="main-nav__pages-container_address1" href="">Experiencia</a></li>
+                <li><a class="main-nav__pages-container_address1" href="">Galeria</a></li>
+                <li><a class="main-nav__pages-container_address1" href="">Contacto</a></li>
+            </ul>
+           </div>
+
+           <div class="main-nav__blog-privacity-container">
+                <ul>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">POLITICAS DE PRIVACIDAD</a></li>
+                </ul>
+            </div>
+
+           <div class="main-nav__networks-buttons-container">
+                <ul>
+                    <li><a href="" class="main-nav__networks-buttons-container_networks-button facebook"></a></li>
+                    <li><a href="" class="main-nav__networks-buttons-container_networks-button instagram"></a></li>
+                    <li><a href="" class="main-nav__networks-buttons-container_networks-button tiktok"></a></li>
+                </ul>
+           </div>
+                      
+       </nav>
+   </header> 
+
+   <script>
+       var navBarStatus = false;
+       function navBar(){
+            let showMenu = document.querySelector('.main-nav');
+            let hamburguer = document.querySelector('.main-nav__hamburguer-container');
+            if (navBarStatus==false){
+                showMenu.style.display="block";
+                hamburguer.style.background="url('./icons/close-menu.svg') center/cover no-repeat";
+            }else{
+                showMenu.style.display="none";
+                hamburguer.style.background="url('./icons/Menu-Mobile.svg') center/cover no-repeat";
+            }
+            navBarStatus=!navBarStatus;
+       }
+   </script>
+</body>
+</html>

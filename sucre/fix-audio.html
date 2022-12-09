@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nestor David Castillo">
+    <meta name="description" content="Componente de audio">
+    <title>Audio Component</title>
+    <style>
+        .header-sound{
+            display: flex;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            
+            
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: hotpink;
+            border:none;
+            border-radius: 100%
+        }
+
+        .header-sound img{
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="header-sound" type="submit" onclick="reproduceMusic('push')">
+            <img src="./icons/sound-svg.svg" alt="">
+        </button>
+        
+    </header>
+    
+    <script>
+        var audioElement = new Audio("./bensound-love.mp3");
+        audioElement.play();
+        audioElement.muted=true;
+
+        function reproduceMusic(push){
+            audioElement.muted=!audioElement.muted;
+            console.log(audioElement.muted)
+        }
+    </script>
+</body>
+</html>

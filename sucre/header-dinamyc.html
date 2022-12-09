@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:#F3A660;
+            --black-dark: #3d3d3d67;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-size: 1.6rem;
+        }
+
+        header{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+
+        .header-logo{
+            display: block;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: url(./logo-ghp.svg) no-repeat center;
+            background-size: 239px 140px;
+            z-index: 10;
+        }
+
+        .header-video__filter{
+            display: block;
+            position: absolute;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            background-color: var(--black-dark);
+            z-index: 9;
+        }
+
+        .header-video video{
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 8;
+        }
+
+        .header-sound{
+            display:flex;
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            bottom: 1rem;
+            left: 1rem;
+            
+            width: 32px;
+            height: 32px;
+            z-index: 11;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: var(--primary-color);
+            border:none;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .header-sound img{
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            
+        </div>
+
+        <div class="header-video">
+            <div class="header-video__filter">
+            </div>
+
+           <video 
+                poster="./images/sala.jpg"
+                autoplay 
+                muted
+                loop
+                playsinline
+                >
+                <source src="./video/cuenca-background.mp4" type="video/mp4"/>
+            </video>
+        </div>
+        <button class="header-sound" type="submit" onclick="reproduceMusic('push')">
+            <img id="sound" src="./icons/sound-muted-svg.svg" alt="">
+        </button>
+    </header>
+    
+    <script>
+        var audioElement = new Audio("./bensound-love.mp3");
+        var firstReproduction = 0;
+        var soundMuted=document.getElementById("sound");
+        
+        function reproduceMusic(push){
+            if (firstReproduction == 0){
+                audioElement.setAttribute("loop","");
+                audioElement.play();
+                audioElement.muted=false;
+                if(audioElement.muted==false){
+                    soundMuted.setAttribute("src","./icons/sound-svg.svg")
+                }
+                firstReproduction++;
+            }else{
+                audioElement.muted=!audioElement.muted;
+                if(audioElement.muted==false){
+                    soundMuted.setAttribute("src","./icons/sound-svg.svg")
+                }else{
+                    soundMuted.setAttribute("src","./icons/sound-muted-svg.svg")
+                }
+                console.log(audioElement.muted)
+                firstReproduction++;
+            }
+        }
+    </script>
+</body>
+</html>

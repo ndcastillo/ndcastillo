@@ -1,0 +1,11 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "Pagina Principal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nestor David Castillo <nestor.castillo@ucuenca.edu.ec>",
+  "license": "MIT"
+}
