@@ -1,4 +1,4 @@
-# 👨‍💻 David Castillo - Desarrollador de Software
+# 👨‍💻 David Castillo - Desarrollador de Software | Ing. en Electrónica y Telecomunicaciones
 
 ### 🚀 Sobre Mí
 Desarrollador de software con más de 3 años de experiencia en tecnologías modernas como **React**, **NodeJS**, **Figma** y **.NET Core**. Apasionado por crear soluciones innovadoras, integrar sistemas complejos y liderar proyectos tecnológicos. Ingeniero en Electrónica y Telecomunicaciones con reconocimientos en investigación y habilidades versátiles en diseño y desarrollo.
